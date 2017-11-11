@@ -1,0 +1,37 @@
+<wxs module="colorConvert">
+var r = 0, g = 0, b = 0;
+var hexToRgb = function(option) {
+  var hex = option;
+  var bigint = parseInt(hex, 16);
+  r = (bigint >> 16) & 255;
+  g = (bigint >> 8) & 255;
+  b = bigint & 255;
+  return r + ', ' + g + ', ' + b
+};
+
+module.exports.hexToRgb = hexToRgb;
+</wxs>
+
+<view class="page">
+  <view class="page__bd"
+  style="background-color: {{'#' + pageColor}}">
+    <view class="color-message">
+      <view class="color-names">
+        <text class="color-cname">{{pageCname}}</text>
+        <text class="color-name"> {{pageName}}</text>
+      </view>
+      <view>
+        <text>HexColor: #{{pageColor}}</text>
+      </view>
+      <view>
+        <text>RGB: rgb({{colorConvert.hexToRgb(pageColor)}})</text>
+      </view>
+    </view>
+    <view class="copy-color"
+    bindtap="copyColor"
+    data-hexcolor="{{'#' + pageColor}}"
+    data-rgb="{{'rgb(' + colorConvert.hexToRgb(pageColor) + ')'}}">
+        复制色值
+    </view>
+  </view>
+</view>

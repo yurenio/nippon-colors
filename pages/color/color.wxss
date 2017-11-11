@@ -1,0 +1,39 @@
+.page__bd {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.color-message {
+  position: absolute;
+  color: white;
+  text-shadow: 2rpx 2rpx 5rpx black;
+  margin-left: 50rpx;
+  margin-top: 50rpx;
+}
+
+.color-names {
+  margin-bottom: -10rpx;
+}
+
+.color-cname {
+  font-size: 2rem;
+}
+
+.color-name {
+  font-size: 1.5rem;
+}
+
+.copy-color {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: 1px solid white;
+  margin-top: 20rpx;
+  color: white;
+  text-shadow: 2rpx 2rpx 5rpx black;
+}

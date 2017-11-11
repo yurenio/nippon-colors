@@ -1,0 +1,16 @@
+<view class="page">
+  <view class="page__bd">
+    <button class="weui-btn color"
+    hover-class="color-hover"
+    wx:for="{{colorArray}}"
+    wx:key="*this"
+    style="background-color:{{'#' + item.color}};"
+    bindtap="onClick"
+    data-color="{{item.color}}"
+    data-id="{{item.id}}"
+    data-cname="{{item.cname}}"
+    data-name="{{item.name}}">
+      {{item.cname}} <text>{{item.name}}</text>
+    </button>
+  </view>
+</view>
